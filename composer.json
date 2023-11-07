@@ -1,0 +1,15 @@
+{
+    "name": "kevinspinler/kst",
+    "autoload": {
+        "psr-4": {
+            "Kst\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Spinler",
+            "email": "info@kevin-spinler.de"
+        }
+    ],
+    "require": {}
+}
