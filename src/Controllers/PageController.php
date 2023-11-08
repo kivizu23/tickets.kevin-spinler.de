@@ -16,7 +16,7 @@ class PageController extends Controller {
         $this->pages = array();
         $sql = "SELECT * FROM pages";
         $result = $this->connection->query($sql);
-        
+
         while ($row = $result->fetch_assoc()) {
             $this->pages[] = new Page(
                 $row['id'],
