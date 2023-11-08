@@ -5,7 +5,6 @@ namespace Kst\Models;
 class Page
 {
     private $id;
-    private $name;
     private $type;
     private $template;
 
@@ -36,10 +35,9 @@ class Page
     private $social_description;
 
 
-    public function __construct($id, $name, $type, $template, $slug, $title, $keywords, $description, $author, $image, $category, $tags, $status, $parent, $order, $password, $content, $created_at, $updated_at, $social_image, $social_title, $social_description)
+    public function __construct($id, $type, $template, $slug, $title, $keywords, $description, $author, $image, $category, $tags, $status, $parent, $order, $password, $content, $created_at, $updated_at, $social_image, $social_title, $social_description)
     {
         $this->id = $id;
-        $this->name = $name;
         $this->type = $type;
         $this->template = $template;
         $this->slug = $slug;
@@ -69,15 +67,6 @@ class Page
     public function getId()
     {
         return $this->id;
-    }
-
-    public function setName($name) {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
     }
 
     public function setType($type) {

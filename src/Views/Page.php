@@ -8,7 +8,7 @@
         <meta name="keywords" content="<?php echo $page->getKeywords(); ?>" />
         <meta name="author" content="<?php echo $page->getAuthor(); ?>" />
 
-        <meta property="og:title" content="<?php echo $page->getTitle(); ?>" />
+        <meta property="og:title" content="<?php echo $page->getSocialTitle(); ?>" />
         <meta property="og:type" content="<?php echo $page->getType(); ?>" />
         <meta property="og:url" content="<?php echo PAGE_URL.$page->getSlug(); ?>" />
         <meta property="og:image" content="<?php echo PAGE_URL.$page->getSocialImage(); ?>" />
@@ -27,5 +27,11 @@
 
         <?php echo $page->getContent(); ?>
 
+        <br>
+        <br>
+
+        <pre>
+            <?php print_r($page); ?>
+        </pre>
     </body>
 </html>

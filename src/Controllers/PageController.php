@@ -16,11 +16,10 @@ class PageController extends Controller {
         $this->pages = array();
         $sql = "SELECT * FROM pages";
         $result = $this->connection->query($sql);
-
+        
         while ($row = $result->fetch_assoc()) {
             $this->pages[] = new Page(
                 $row['id'],
-                $row['name'],
                 $row['type'],
                 $row['template'],
                 $row['slug'],
@@ -29,8 +28,8 @@ class PageController extends Controller {
                 $row['description'],
                 $row['author'],
                 $row['image'],
-                $row['category'],
-                $row['tags'],
+                $row['categoryID'],
+                $row['tagsID'],
                 $row['status'],
                 $row['parent'],
                 $row['order'],

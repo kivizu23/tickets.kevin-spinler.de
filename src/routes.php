@@ -12,6 +12,4 @@ foreach ($pageController->getPages() as $page) {
     $router->addRoute($page->getSlug(), PageController::class, 'index', $page->getSlug());
 }
 
-$uri = $_SERVER['REQUEST_URI'];
-
-$router->dispatch($uri);
+$router->dispatch($_SERVER['REQUEST_URI']);
